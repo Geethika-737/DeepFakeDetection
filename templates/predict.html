@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict - Deep Fake Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Deep Fake Detection System</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/prediction">Predict</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+<h2>Upload Image for Prediction</h2>
+
+<p>Select an image to check whether it is <b>Real</b> or <b>Fake</b>.</p>
+
+<form action="/predict" method="POST" enctype="multipart/form-data">
+
+<input type="file" name="image" accept="image/*" required>
+
+<br><br>
+
+<button type="submit">Predict Image</button>
+
+</form>
+
+</section>
+
+<footer>
+<p>© 2026 Deep Fake Detection System</p>
+</footer>
+
+</body>
+</html>
